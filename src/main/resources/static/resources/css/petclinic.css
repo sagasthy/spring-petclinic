@@ -9529,4 +9529,263 @@ strong {
     margin-top: 10px;
     margin-bottom: 30px; } }
 
+/* ==========================================================================
+   MODERN UI ENHANCEMENTS
+   ========================================================================== */
+
+/* Modern Color Palette */
+:root {
+  --modern-primary-light: #667eea;
+  --modern-primary-dark: #764ba2;
+  --modern-text-primary: #2c3e50;
+  --modern-text-secondary: #666666;
+  --modern-text-muted: #999999;
+  --modern-bg-light: #f8fafb;
+  --modern-shadow: rgba(102, 126, 234, 0.4);
+  --modern-border-radius: 6px;
+  --modern-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Typography Updates */
+body, h1, .h1, h2, .h2, h3, .h3, p, input {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--modern-text-primary) !important;
+}
+
+h1, .h1 {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+h2, .h2 {
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+h3, .h3 {
+  font-weight: 600;
+}
+
+/* Modern Navbar */
+.navbar {
+  background: linear-gradient(135deg, var(--modern-primary-light) 0%, var(--modern-primary-dark) 100%) !important;
+  border-top: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+}
+
+.navbar li > a,
+.navbar-text {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: var(--modern-transition);
+  padding: 1rem 1.25rem !important;
+}
+
+.navbar li:hover > a,
+.navbar li > a:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a.navbar-brand {
+  transition: var(--modern-transition);
+}
+
+.navbar a.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+/* Modern Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--modern-primary-light) 0%, var(--modern-primary-dark) 100%) !important;
+  border: none !important;
+  border-radius: var(--modern-border-radius);
+  box-shadow: 0 4px 12px var(--modern-shadow);
+  transition: var(--modern-transition);
+  font-weight: 500;
+  padding: 0.625rem 1.5rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--modern-shadow);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px var(--modern-shadow);
+}
+
+.btn {
+  border-radius: var(--modern-border-radius);
+  transition: var(--modern-transition);
+  font-weight: 500;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Modern Form Controls */
+.form-control {
+  border-radius: var(--modern-border-radius) !important;
+  border: 1px solid #e0e0e0 !important;
+  padding: 0.625rem 0.875rem !important;
+  transition: var(--modern-transition);
+}
+
+.form-control:focus {
+  border-color: var(--modern-primary-light) !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+}
+
+.form-control::placeholder {
+  color: var(--modern-text-muted);
+}
+
+/* Modern Tables */
+.table thead th {
+  background: linear-gradient(135deg, var(--modern-primary-light) 0%, var(--modern-primary-dark) 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 1rem !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+  transition: var(--modern-transition);
+}
+
+.table tbody tr:hover {
+  background-color: rgba(102, 126, 234, 0.05) !important;
+  transform: scale(1.01);
+}
+
+.table td {
+  padding: 0.875rem !important;
+  border-color: #f0f0f0 !important;
+}
+
+/* Modern Cards */
+.card {
+  border-radius: 8px !important;
+  border: 1px solid #e9ecef !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: var(--modern-transition);
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--modern-primary-light) 0%, var(--modern-primary-dark) 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 1rem 1.5rem !important;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0 !important;
+}
+
+.card-body {
+  padding: 1.5rem !important;
+}
+
+/* Modern Links */
+a {
+  color: var(--modern-primary-light);
+  transition: var(--modern-transition);
+}
+
+a:hover {
+  color: var(--modern-primary-dark);
+  text-decoration: none;
+}
+
+/* Modern Backgrounds */
+body {
+  background-color: var(--modern-bg-light);
+}
+
+/* Container Details Table Override */
+.container-details-table th {
+  background: linear-gradient(135deg, var(--modern-primary-light) 0%, var(--modern-primary-dark) 100%) !important;
+  color: #ffffff !important;
+}
+
+/* Status Help Content Table Override */
+.status-help-content-table td {
+  color: var(--modern-text-primary) !important;
+}
+
+/* Modern HR */
+hr {
+  border-top: 1px solid #e0e0e0 !important;
+  opacity: 0.5;
+}
+
+/* Splash Screen Override */
+.splash {
+  background: linear-gradient(135deg, var(--modern-primary-light) 0%, var(--modern-primary-dark) 100%) !important;
+  color: #ffffff !important;
+}
+
+/* Help Block */
+.help-block {
+  color: var(--modern-text-secondary) !important;
+}
+
+/* Modern Spacing */
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Focus States for Accessibility */
+button:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--modern-primary-light);
+  outline-offset: 2px;
+}
+
+/* Smooth Animations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Print Styles */
+@media print {
+  .navbar {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .navbar {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card:hover {
+    transform: none;
+  }
+  
+  .table tbody tr:hover {
+    transform: none;
+  }
+}
+
 /*# sourceMappingURL=../../../../../../target/petclinic.css.map */
