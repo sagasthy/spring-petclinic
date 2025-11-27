@@ -2,10 +2,10 @@
 
 ## Approach 1 - Using Copilot & Draw.io
 
-1. Install pandoc for converting documents to Copilot supported format .md
+1. Install pandoc for converting documents to a Copilot supported format ".md".
    <br>
     https://github.com/jgm/pandoc/releases/tag/3.8.2.1
-2. Convert the requirements document from .docx format to .md format
+2. Convert the requirements document from .docx format to .md format.
     <br> 
     `pandoc Requirements.docx -o Requirements.md --extract-media=./images`
 3. Install "Draw.io Integration" extension in VS Code to see live preview and make edits to the generated diagram.
@@ -15,13 +15,13 @@
 
 ## Approach 2 - Using Copilot & Mermaid
 
-1. Install pandoc for converting documents to Copilot supported format .md
+1. Install pandoc for converting documents to a Copilot supported format ".md".
    <br>
     https://github.com/jgm/pandoc/releases/tag/3.8.2.1
-2. Convert the requirements document from .docx format to .md format
+2. Convert the requirements document from .docx format to .md format.
     <br> 
     `pandoc Requirements.docx -o Requirements.md --extract-media=./images`
-3. Install "Mermaid Chart" extension in VS Code to see live preview and make edits to the generated diagram
+3. Install "Mermaid Chart" extension in VS Code to see live preview and make edits to the generated diagram.
 4. Provide the converted requirements document in .md format along with relevant images to the context, and ask Copilot to generate the diagram.
 5. The generated diagram can be exported to png or svg image format and added to confluence.
 
