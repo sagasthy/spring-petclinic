@@ -21,7 +21,7 @@
 2. Convert the requirements document from .docx format to .md format
     <br> 
     `pandoc Requirements.docx -o Requirements.md --extract-media=./images`
-3. Install mermaid chart extension to see live preview and make edits to the generated diagram
+3. Install "Mermaid Chart" extension in VS Code to see live preview and make edits to the generated diagram
 4. Provide the converted requirements document in .md format along with relevant images to the context, and ask Copilot to generate the diagram.
 5. The generated diagram can be exported to png or svg image format and added to confluence.
 
