@@ -1,0 +1,28 @@
+---
+references:
+  - "File: /k8s/petclinic.yml"
+  - "File: /k8s/db.yml"
+  - "File: /.github/copilot-instructions.md"
+generationTime: 2025-11-24T15:35:17.295Z
+---
+architecture-beta
+    group network_layer(cloud)[Network Layer]
+    group app_layer(server)[Application Layer]
+    group data_layer(database)[Data Layer]
+    group config_layer(disk)[Configuration Layer]
+    
+    service petclinic_service(internet)[Petclinic Service] in network_layer
+    service petclinic_deployment(server)[Petclinic Deployment] in app_layer
+    service petclinic_pod(server)[Petclinic Pod] in app_layer
+    service demo_db_service(internet)[Demo DB Service] in data_layer
+    service demo_db_deployment(database)[Demo DB Deployment] in data_layer
+    service postgres_pod(database)[Postgres Pod] in data_layer
+    service demo_db_secret(disk)[Demo DB Secret] in config_layer
+    
+    petclinic_service:B -- T:petclinic_deployment
+    petclinic_deployment:B -- T:petclinic_pod
+    petclinic_pod:R -- L:demo_db_service
+    demo_db_service:B -- T:demo_db_deployment
+    demo_db_deployment:B -- T:postgres_pod
+    demo_db_secret:B -- T:postgres_pod
+    demo_db_secret:R -- L:petclinic_pod
